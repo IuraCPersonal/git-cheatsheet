@@ -1,0 +1,145 @@
+#+TITLE: The Ultimate Git Cheatsheet
+#+AUTHOR: IuraCPersonal
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+* DOWNLOAD AND CREATE PROJECTS
+
+Create an empty Git repository or reinitialize an existing one.
+
+#+begin_example
+$ git init
+#+end_example
+
+Clone a repository into a new directory, including all of the files, branches and commits.
+
+#+begin_example
+$ git clone <repository_url>
+#+end_example
+
+Link the local repository to an empty GitHub repository.
+
+#+begin_example
+$ git remote add origin <repository_url>
+#+end_example
+
+* SETUP ACCOUNT
+
+Set a Username
+
+#+begin_example
+$ git config --global user.name "<firstname lastname>"
+#+end_example
+
+Set an Email Address
+
+#+begin_example
+$ git config --global user.email "<valid@email.com>"
+#+end_example
+
+How can I save username and password in Git?
+
+*Attention:* This method saves the credentials in =plaintext= on your PC's disk. Everyone on your computer can access it.
+
+#+begin_example
+git config --global credential.helper store
+#+end_example
+
+After entering the command, just do a =git pull= or =git push= request and enter your credentials. After that you will not be asked to do it again.
+
+* BRANCHES
+
+Check the current branch.
+
+#+begin_example
+$ git branch
+#+end_example
+
+Create a new branch.
+
+#+begin_example
+$ git branch <branch_name>
+#+end_example
+
+Switch branches or restore working tree files.
+
+#+begin_example
+$ git checkout -b <branch_name>
+#+end_example
+
+Delete a branch.
+
+#+begin_example
+$ git branch -d <branch_name>
+#+end_example
+
+* BASIC SNAPSHOTTING
+
+Show the working tree status.
+
+#+begin_example
+$ git status
+#+end_example
+
+Add file contents to the index, to prepare the content staged for the next commit.
+
+#+begin_example
+$ git add <file_name>
+#+end_example
+
+Add all changed files in your present working directory to the index.
+
+#+begin_example
+$ git add .
+#+end_example
+
+Record changes to the repository. Create a new commit containing the current contents of the index and the given log message describing the changes.
+
+#+begin_example
+$ git commit -m "<descriptive message>"
+#+end_example
+
+Incorporates changes from a remote repository into the current branch.
+
+#+begin_example
+$ git pull origin <branch_name>
+#+end_example
+
+Updates remote refs using local refs, while sending objects necessary to complete the given refs.
+
+#+begin_example
+git push origin <branch_name>
+#+end_example
+
+Synchronize your local repository with the remote repository on GitHub.
+
+#+begin_example
+$ git fetch
+#+end_example
+
+* MERGING
+
+Join two or more development histories together.
+
+#+begin_example
+$ git merge <branch_name>
+#+end_example
+
+* REDO COMMITS
+
+Reset current HEAD to the specified state, but leave the working directory unchanged.
+
+#+begin_example
+$ git reset
+#+end_example
+
+Reset current HEAD to match most recent commit and *overwrites* all changes in the working directory.
+
+#+begin_example
+$ git reset --hard
+#+end_example
+
+Revert some existing commits.
+
+#+begin_example
+git revert <commit>
+#+end_example
