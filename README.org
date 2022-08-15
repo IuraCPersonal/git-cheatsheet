@@ -143,3 +143,21 @@ Revert some existing commits.
 #+begin_example
 git revert <commit>
 #+end_example
+
+* GITHUB REPOS EVERY DEVELOPER MUST KNOW
+
++ [[https://github.com/jwasham/coding-interview-university][Coding-interview-university]]
++ [[https://github.com/donnemartin/system-design-primer][system-design-primer]]
++ [[https://github.com/lauragift21/awesome-learning-resources][awesome-learning-resources]]
++ [[https://github.com/bradtraversy/50projects50days][50projects50days]]
+
+* HOW NOT TO USE GIT
+
+Git usages that are a bad practice and you should avoid.
+
+1. Do not commit directly to the main, release or dev branches.
+2. Don't commit files that contain the individual user environment variables (aka. .env/.env.* files).
+3. Avoid working on multiple issues in the same branch.
+4. NEVER do a force push.
+5. Do not edit or delete the last commited message.
+
